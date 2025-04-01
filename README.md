@@ -8,6 +8,9 @@ Ogni guida è scritta in formato Markdown per una facile lettura e modifica.
 ### [Docker](docker.md)
 Una guida rapida su Docker, coprendo comandi di base, gestione delle immagini, container, volumi, reti e Docker Compose.
 
+### [Doxygen](doxygen.md)
+Una guida introduttiva a Doxygen, coprendo installazione, configurazione del progetto, personalizzazione del Doxyfile, sintassi dei commenti per la documentazione, generazione e visualizzazione della documentazione.
+
 ### [Git](git.md)
 Una guida ai comandi Git più utili, inclusi sincronizzazione con repository remoti, gestione dei branch, controllo dello stato e della cronologia, e gestione delle modifiche temporanee.
 
