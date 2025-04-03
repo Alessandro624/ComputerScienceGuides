@@ -29,6 +29,9 @@ Una guida rapida a MPI (Message Passing Interface), coprendo concetti fondamenta
 ### [MySQL / MariaDB](mySQL_MariaDB.md)
 Una guida rapida a MySQL e MariaDB, coprendo accesso, gestione del servizio, creazione ed eliminazione di utenti e database, gestione dei privilegi, backup e ripristino, creazione e modifica di tabelle, indici, trigger, stored procedure e funzioni, e gestione delle transazioni ed eventi.
 
+### [Valgrind](valgrind.md)
+Guida su Valgrind, uno strumento per il debugging e il profiling della memoria nei programmi C e C++.
+
 ## Come Utilizzare le Guide
 
 Ogni guida è autonoma e può essere letta indipendentemente dalle altre.
