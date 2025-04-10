@@ -13,6 +13,7 @@ sudo apt-get install valgrind
 ## Utilizzo di Base
 
 ### Eseguire un programma con Valgrind
+
 Per analizzare la gestione della memoria di un programma:
 
 ```bash
@@ -32,6 +33,7 @@ Questo comando verifica perdite di memoria e mostra dettagli su ogni perdita ril
 ```bash
 valgrind --tool=callgrind ./mio_programma
 ```
+
 Genera un report dettagliato sulle funzioni più eseguite.
 
 ### Modalità Massif (per l'analisi dell'uso della memoria)
@@ -39,6 +41,7 @@ Genera un report dettagliato sulle funzioni più eseguite.
 ```bash
 valgrind --tool=massif ./mio_programma
 ```
+
 Genera un report sull'allocazione della memoria durante l'esecuzione del programma.
 
 ## Visualizzazione dei Dati con Strumenti Grafici
@@ -47,9 +50,7 @@ Genera un report sull'allocazione della memoria durante l'esecuzione del program
 
 `massif-visualizer` è uno strumento grafico che permette di analizzare i dati generati da Massif in modo interattivo, visualizzando l'andamento dell'allocazione di memoria nel tempo.
 
-#### Installazione
-
-##### Su Linux (Debian/Ubuntu)
+#### Installazione Massif-Visualizer Su Linux (Debian/Ubuntu)
 
 ```bash
 sudo apt-get install massif-visualizer
@@ -75,15 +76,13 @@ Massif-Visualizer mostrerà un grafico interattivo che permette di esaminare l'u
 
 `kcachegrind` è un visualizzatore grafico per i dati generati da Callgrind, utile per analizzare il comportamento del programma e individuare colli di bottiglia nel codice.
 
-#### Installazione
-
-##### Su Linux (Debian/Ubuntu)
+#### Installazione KCachegrind Su Linux (Debian/Ubuntu)
 
 ```bash
 sudo apt-get install kcachegrind
 ```
 
-#### Utilizzo
+#### Utilizzo KCachegrind
 
 Per generare i dati con Callgrind:
 
