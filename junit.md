@@ -1,6 +1,7 @@
 # JUnit 5 - Guida Rapida
 
 ## Installazione
+
 Per utilizzare JUnit 5, aggiungi le dipendenze appropriate al tuo progetto. Se stai utilizzando Maven, aggiungi le seguenti dipendenze al file `pom.xml`:
 
 ```xml
@@ -33,12 +34,15 @@ dependencies {
 ```
 
 ## Struttura dei Test in JUnit 5
+
 JUnit 5 è composto da tre sotto-progetti principali:
+
 - **JUnit Jupiter**: il nuovo framework di programmazione e di esecuzione dei test.
 - **JUnit Vintage**: supporto per l'esecuzione di test scritti con JUnit 3 e 4.
 - **JUnit Platform**: una piattaforma comune per l'esecuzione di test.
 
 ### Esempio di un Test Base
+
 Un test di base in JUnit 5 potrebbe apparire così:
 
 ```java
@@ -58,6 +62,7 @@ public class MyTest {
 ## Annotations
 
 ### @Test
+
 L'annotazione `@Test` è usata per definire un metodo di test. Ogni metodo annotato con `@Test` viene eseguito come test.
 
 ```java
@@ -68,6 +73,7 @@ void test() {
 ```
 
 ### @BeforeEach e @AfterEach
+
 - `@BeforeEach`: annotazione utilizzata per eseguire un metodo prima di ogni test.
 - `@AfterEach`: annotazione utilizzata per eseguire un metodo dopo ogni test.
 
@@ -90,6 +96,7 @@ public class MyTest {
 ```
 
 ### @BeforeAll e @AfterAll
+
 - `@BeforeAll`: annotazione utilizzata per eseguire un metodo prima di tutti i test nella classe.
 - `@AfterAll`: annotazione utilizzata per eseguire un metodo dopo tutti i test nella classe.
 
@@ -114,6 +121,7 @@ public class MyTest {
 ```
 
 ### @Disabled
+
 L'annotazione `@Disabled` disabilita temporaneamente un test. Può essere utile se si desidera eseguire i test solo parzialmente.
 
 ```java
@@ -126,6 +134,7 @@ public void test() {
 ```
 
 ### @TestInstance
+
 L'annotazione `@TestInstance` specifica se il ciclo di vita della classe di test deve essere creato per ogni test o solo una volta per classe. Può essere utile per ottimizzare il tempo di esecuzione dei test.
 
 ```java
@@ -148,9 +157,11 @@ public class MyTest {
 ```
 
 ## Asserzioni
+
 JUnit 5 fornisce vari metodi di asserzione per verificare le condizioni durante i test:
 
 ### assertEquals
+
 Verifica che due valori siano uguali.
 
 ```java
@@ -158,6 +169,7 @@ assertEquals(10, risultato);
 ```
 
 ### assertTrue / assertFalse
+
 Verifica che una condizione sia vera o falsa.
 
 ```java
@@ -166,6 +178,7 @@ assertFalse(condizione);
 ```
 
 ### assertNotNull / assertNull
+
 Verifica che un valore non sia nullo o nullo.
 
 ```java
@@ -174,6 +187,7 @@ assertNull(obj);
 ```
 
 ### assertThrows
+
 Verifica che un'eccezione venga lanciata.
 
 ```java
@@ -183,9 +197,11 @@ assertThrows(IllegalArgumentException.class, () -> {
 ```
 
 ## Parametrizzazione dei Test
+
 JUnit 5 permette di eseguire lo stesso test con diversi parametri utilizzando l'annotazione `@ParameterizedTest`.
 
 ### Esempio con `@ValueSource`
+
 ```java
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -201,6 +217,7 @@ public class MyTest {
 ```
 
 ### Esempio con `@CsvSource`
+
 ```java
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -217,22 +234,27 @@ public class MyTest {
 ```
 
 ## Esecuzione dei Test
+
 Per eseguire i test, puoi usare i seguenti comandi, a seconda del tuo strumento di build.
 
 ### Maven
+
 ```bash
 mvn test
 ```
 
 ### Gradle
+
 ```bash
 gradle test
 ```
 
 ## Test Suite
+
 Un **Test Suite** è un gruppo di test che possono essere eseguiti insieme. Può essere creato usando l'annotazione `@Suite` in JUnit 5.
 
-### Esempio:
+### Esempio Test Suite
+
 ```java
 import org.junit.jupiter.api.Test;
 import org.junit.platform.suite.api.SelectClasses;
@@ -245,9 +267,11 @@ public class AllTests {
 ```
 
 ## Test di Timeout
+
 Per eseguire un test con un limite di tempo, usa l'annotazione `@Timeout`.
 
-### Esempio:
+### Esempio Test di Timeout
+
 ```java
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
@@ -265,9 +289,11 @@ public class MyTest {
 ## Funzioni di Test Avanzate
 
 ### @EnabledIf / @DisabledIf
+
 Le annotazioni `@EnabledIf` e `@DisabledIf` permettono di eseguire o disabilitare test in base a condizioni specifiche.
 
-### Esempio:
+### Esempio
+
 ```java
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.EnabledIf;
