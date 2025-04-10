@@ -1,17 +1,20 @@
 # Maven - Guida Rapida
 
 ## Installazione
+
 Per installare Maven, scarica l'ultima versione dal sito ufficiale [Apache Maven](https://maven.apache.org/download.cgi) e decomprimila in una directory a tua scelta. Successivamente, aggiungi il percorso della directory `bin` alla variabile d'ambiente `PATH`.
 
 Per verificare che Maven sia stato installato correttamente, esegui:
+
 ```bash
 mvn -v
 ```
 
 ## Struttura di un Progetto Maven
+
 Un progetto Maven è organizzato in una struttura di directory standard. Ecco la struttura di base:
 
-```
+```text
 nome-progetto
 │
 ├── src
@@ -26,6 +29,7 @@ nome-progetto
 ```
 
 ## pom.xml
+
 Il file `pom.xml` è il cuore di ogni progetto Maven. Contiene tutte le informazioni di configurazione e le dipendenze del progetto. Un esempio di `pom.xml` di base:
 
 ```xml
@@ -54,32 +58,42 @@ Il file `pom.xml` è il cuore di ogni progetto Maven. Contiene tutte le informaz
 ## Costruzione del Progetto
 
 ### Esegui Build
+
 Per costruire il progetto, esegui:
+
 ```bash
 mvn clean install
 ```
+
 - `clean`: rimuove la cartella `target` (se esiste) prima di iniziare una nuova compilazione.
 - `install`: compila il progetto e copia l'artefatto (file JAR, WAR, etc.) nella repository locale di Maven.
 
 ### Esegui il Test
+
 Per eseguire i test di unità:
+
 ```bash
 mvn test
 ```
 
 ### Esegui la compilazione
+
 Per compilare il progetto senza eseguire i test:
+
 ```bash
 mvn compile
 ```
 
 ### Generare il pacchetto (JAR/WAR)
+
 Per generare un pacchetto eseguibile:
+
 ```bash
 mvn package
 ```
 
 ## Gestione delle Dipendenze
+
 Le dipendenze vengono gestite nel file `pom.xml` sotto il tag `<dependencies>`. Un esempio di dipendenza per JUnit:
 
 ```xml
@@ -96,6 +110,7 @@ Le dipendenze vengono gestite nel file `pom.xml` sotto il tag `<dependencies>`. 
 Per aggiungere una dipendenza al progetto, puoi trovare le informazioni su [Maven Central Repository](https://search.maven.org/).
 
 ### Gestione delle Versioni
+
 Puoi specificare la versione della dipendenza, come nel caso di JUnit sopra, o utilizzare un intervallo di versioni per una maggiore flessibilità:
 
 ```xml
@@ -109,6 +124,7 @@ Puoi specificare la versione della dipendenza, come nel caso di JUnit sopra, o u
 ## Plugin
 
 ### Configurazione di un Plugin
+
 Maven utilizza i plugin per eseguire diverse fasi di un ciclo di vita di costruzione. Per configurare un plugin, aggiungi la sezione `<plugins>` nel tag `<build>` del file `pom.xml`:
 
 ```xml
@@ -128,6 +144,7 @@ Maven utilizza i plugin per eseguire diverse fasi di un ciclo di vita di costruz
 ```
 
 ### Plugin per Eseguire Test
+
 Per eseguire i test di unità con il plugin `maven-surefire-plugin`:
 
 ```xml
@@ -143,6 +160,7 @@ Per eseguire i test di unità con il plugin `maven-surefire-plugin`:
 ```
 
 ## Profilo
+
 Un profilo consente di configurare diverse impostazioni di build, come la configurazione di ambiente o destinazione di distribuzione, che possono essere attivate o disattivate. Ecco un esempio di un profilo di test in `pom.xml`:
 
 ```xml
@@ -157,6 +175,7 @@ Un profilo consente di configurare diverse impostazioni di build, come la config
 ```
 
 Puoi attivare un profilo con il comando:
+
 ```bash
 mvn clean install -P test
 ```
@@ -164,6 +183,7 @@ mvn clean install -P test
 ## Repository
 
 ### Aggiungere una Repository
+
 Per aggiungere una repository personalizzata, usa il tag `<repositories>`:
 
 ```xml
@@ -176,6 +196,7 @@ Per aggiungere una repository personalizzata, usa il tag `<repositories>`:
 ```
 
 ### Utilizzare una Repository Locale
+
 Puoi usare una repository locale per archiviare artefatti personali o di terze parti. La configurazione si effettua nel file `settings.xml` di Maven (tipicamente in `~/.m2/settings.xml`).
 
 ```xml
@@ -183,6 +204,7 @@ Puoi usare una repository locale per archiviare artefatti personali o di terze p
 ```
 
 ## Esecuzione di Comandi Personalizzati
+
 Per eseguire comandi Maven personalizzati, puoi scrivere un ciclo di vita specifico nel tuo file `pom.xml`, per esempio:
 
 ```xml
@@ -205,19 +227,23 @@ Per eseguire comandi Maven personalizzati, puoi scrivere un ciclo di vita specif
 ```
 
 Per eseguire il comando personalizzato:
+
 ```bash
 mvn exec:java
 ```
 
 ## Esegui un Semplice Comando
+
 Maven offre anche comandi per la gestione del progetto, per esempio:
 
 - Visualizzare informazioni sul progetto:
+
   ```bash
   mvn help:effective-pom
   ```
 
 - Visualizzare la versione di Maven:
+
   ```bash
   mvn --version
   ```
