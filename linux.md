@@ -1,6 +1,7 @@
 # Setup WSL (Windows Subsystem for Linux)
 
 ## Installazione WSL
+
 ```bash
 wsl --install
 wsl --update
@@ -8,11 +9,13 @@ wsl --shutdown
 ```
 
 ## Aggiornare i programmi
+
 ```bash
 sudo apt update && sudo apt upgrade  # aggiorna tutti i programmi
 ```
 
 ## Installazione editor e applicazioni
+
 ```bash
 sudo apt install gnome-text-editor -y  # avviare con gnome-text-editor ... (es. ~/.bashrc)
 sudo apt install gimp -y  # avviare con gimp
@@ -23,6 +26,7 @@ sudo apt install g++ gdb make ninja-build rsync zip
 ```
 
 ## Installazione Google Chrome
+
 ```bash
 cd /tmp
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -30,12 +34,14 @@ sudo apt install --fix-missing ./google-chrome-stable_current_amd64.deb  # avvia
 ```
 
 ## Installazione VS Code
+
 ```bash
 sudo apt install snapd
 sudo snap install code --classic  # avviare con code
 ```
 
 ## Installazione e disinstallazione MPI
+
 ```bash
 sudo apt install libopenmpi-dev openmpi-bin
 sudo apt-get remove openmpi-bin  # oppure aggiungere --auto-remove prima di openmpi-bin
@@ -43,9 +49,10 @@ sudo apt-get remove openmpi-bin  # oppure aggiungere --auto-remove prima di open
 
 ---
 
-# Comandi Linux Utili
+## Comandi Linux Utili
 
-## Comandi generali
+### Comandi generali
+
 ```bash
 man          # manuale
 --help       # manuale specifico per un comando
@@ -106,7 +113,8 @@ nslookup      # risoluzione dominio sito in indirizzo IP
 telnet        # connessione a sito/mail server
 ```
 
-## Comandi Speciali
+### Comandi Speciali
+
 ```bash
 TAB          # suggerimenti comandi, file, cartelle, ecc...
 Frecce su e giù # scorrere comandi precedenti
@@ -117,7 +125,8 @@ CTRL+D       # uscita dal terminale
 CTRL+Z       # sospendi job in esecuzione
 ```
 
-## Caratteri Speciali Linux
+### Caratteri Speciali Linux
+
 ```bash
 .            # cartella corrente
 ..           # cartella precedente
@@ -134,7 +143,8 @@ CTRL+Z       # sospendi job in esecuzione
 ! oppure ^   # negazione (non contengono)
 ```
 
-## Variabili di Ambiente
+### Variabili di Ambiente
+
 ```bash
 env          # mostra tutte le variabili di ambiente
 export       # modifica o crea variabili di ambiente
@@ -150,20 +160,23 @@ aggiungere una variabile d'ambiente permanente e non locale:
 
 ---
 
-# C++ Compilazione ed Esecuzione
+## C++ Compilazione ed Esecuzione
 
-## Compilazione e Esecuzione
+### Compilazione e Esecuzione
+
 ```bash
 g++ -std=c++11 -o nome nome.cpp  # compilazione
 ./nome  # esecuzione
 ```
 
-## Passaggio Input da File
+### Passaggio Input da File
+
 ```bash
 type input.txt ./programma
 ```
 
-## Ottimizzazione Compilazione
+### Ottimizzazione Compilazione
+
 ```bash
 -O0  # default
 -O1  # oppure -O
@@ -173,13 +186,15 @@ type input.txt ./programma
 -Ofast # ottimizzazione per massima velocità
 ```
 
-## Codice Misto C/C++ e Assembly
+### Codice Misto C/C++ e Assembly
+
 ```bash
 g++ -g nome.cpp
 objdump -S filebinario
 ```
 
-### AArch64 (ARM)
+#### AArch64 (ARM)
+
 ```bash
 aarch64-linux-gnu-gcc -g nome.cpp
 aarch64-linux-gnu-objdump -S a.out
@@ -187,17 +202,19 @@ aarch64-linux-gnu-objdump -S a.out
 
 ---
 
-# Programma MPI
+## Programma MPI
 
-## Compilazione ed Esecuzione
+### Compilazione ed Esecuzione Programma MPI
+
 ```bash
 mpiCC nome.cpp
 mpirun -np 4 ./a.out  # scegliere numero processori opportunamente
 ```
 
-# Posix Thread
+## Posix Thread
 
-## Compilazione ed Esecuzione
+### Compilazione ed Esecuzione Posix Thread
+
 ```bash
 g++ nome.c/cpp -o nome -lpthread
 ./nome
@@ -206,7 +223,8 @@ time ./nome  # per ottenere i tempi di esecuzione
 
 ---
 
-# Modifica Carattere di Tabulazione
+### Modifica Carattere di Tabulazione
+
 ```bash
 expand -t 4 programma.py  # mostra a schermo
 expand -t 4 programma.py > new_programma.py  # crea e salva in nuovo programma
@@ -214,14 +232,16 @@ expand -t 4 programma.py > new_programma.py  # crea e salva in nuovo programma
 
 ---
 
-# Visualizzare in Formato ASCII un File
+## Visualizzare in Formato ASCII un File
+
 ```bash
 hexdump -C programma.py | less
 ```
 
 ---
 
-# Comandi AArch64
+## Comandi AArch64
+
 ```bash
 aarch64-linux-gnu-gcc -c [nome.s]  # compila e crea file .o
 aarch64-linux-gnu-gcc -o [nome] -static [nome.s]  # assembla e linka
@@ -232,7 +252,8 @@ aarch64-linux-gnu-objdump -j.[nomesezione] -s [nome.o]  # estrazione contenuto d
 
 ---
 
-# Compilare ed Eseguire Java
+## Compilare ed Eseguire Java
+
 ```bash
 javac nome.java
 java nome
@@ -240,7 +261,8 @@ java nome
 
 ---
 
-# Disattivare Hyper-V
+## Disattivare Hyper-V
+
 ```bash
 bcdedit /set hypervisorlaunchtype off
 ```
