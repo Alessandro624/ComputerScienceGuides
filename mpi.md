@@ -1,11 +1,13 @@
 # MPI - Guida Rapida
 
 ## Cos'è MPI?
+
 **MPI (Message Passing Interface)** è uno standard di comunicazione per la programmazione parallela su sistemi distribuiti, in cui diversi processi (su nodi separati o sullo stesso nodo) scambiano dati attraverso messaggi. È utilizzato principalmente per applicazioni che richiedono alte prestazioni e devono eseguire calcoli paralleli su supercomputer o cluster.
 
 MPI consente la comunicazione tra processi distribuiti attraverso la rete (o memoria condivisa) ed è fondamentale per la programmazione su sistemi multiprocessore e multi-core.
 
-### Caratteristiche Principali:
+### Caratteristiche Principali
+
 - **Semplicità**: MPI fornisce una vasta gamma di funzionalità, ma la sua complessità aumenta con la crescita dei sistemi.
 - **Scalabilità**: È progettato per scalare da sistemi piccoli a supercomputer con migliaia di nodi.
 - **Portabilità**: MPI è supportato da molte piattaforme, inclusi sistemi Linux, Windows e altre architetture hardware.
@@ -14,14 +16,18 @@ MPI consente la comunicazione tra processi distribuiti attraverso la rete (o mem
 ## Concetti Fondamentali
 
 ### 1. Processo
+
 Un "processo" è una singola istanza di un programma in esecuzione. MPI si basa sulla comunicazione tra questi processi.
 
 ### 2. Comunicazione
+
 MPI offre vari tipi di comunicazione, tra cui:
+
 - **Comunicazione punto-a-punto**: Trasferimento di messaggi tra due processi.
 - **Comunicazione collettiva**: Comunicazione tra gruppi di processi, come broadcast, riduzioni, o raccolta.
 
 ### 3. MPI Communicator
+
 Un **communicator** è un oggetto MPI che definisce il gruppo di processi coinvolti in una comunicazione. Il communicator predefinito è `MPI_COMM_WORLD`, che include tutti i processi.
 
 ## Comandi e Funzioni MPI Principali
@@ -42,6 +48,7 @@ int main(int argc, char *argv[]) {
 ```
 
 ### 2. Ottenere il Rangolo di un Processo
+
 Ogni processo in MPI ha un **rank** (ID univoco) che lo identifica nel comunicatore:
 
 ```c
@@ -50,6 +57,7 @@ MPI_Comm_rank(MPI_COMM_WORLD, &rank);  // Ottieni il rank del processo
 ```
 
 ### 3. Numero di Processi
+
 Per ottenere il numero totale di processi:
 
 ```c
@@ -60,6 +68,7 @@ MPI_Comm_size(MPI_COMM_WORLD, &size);  // Ottieni il numero totale di processi
 ### 4. Comunicazione Punto-a-Punto
 
 #### MPI_Send
+
 Per inviare un messaggio da un processo a un altro:
 
 ```c
@@ -75,6 +84,7 @@ MPI_Send(&data, 1, MPI_INT, destination_rank, tag, MPI_COMM_WORLD);
 - `MPI_COMM_WORLD`: il comunicatore.
 
 #### MPI_Recv
+
 Per ricevere un messaggio:
 
 ```c
@@ -90,6 +100,7 @@ MPI_Recv(&data, 1, MPI_INT, source_rank, tag, MPI_COMM_WORLD, MPI_STATUS_IGNORE)
 MPI fornisce diverse funzioni per la comunicazione tra gruppi di processi, come la raccolta di dati, riduzioni e broadcast.
 
 #### MPI_Bcast (Broadcast)
+
 Per inviare un dato da un processo a tutti gli altri:
 
 ```c
@@ -100,6 +111,7 @@ MPI_Bcast(&data, 1, MPI_INT, 0, MPI_COMM_WORLD);
 - Il processo con `rank = 0` invia `data` a tutti gli altri processi.
 
 #### MPI_Reduce (Reduzione)
+
 Per eseguire operazioni collettive come sommare valori da tutti i processi:
 
 ```c
@@ -112,6 +124,7 @@ MPI_Reduce(&local_sum, &global_sum, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
 ### 6. Sincronizzazione
 
 #### MPI_Barrier (Barriera di sincronizzazione)
+
 Tutti i processi devono raggiungere questa barriera prima che la comunicazione prosegua:
 
 ```c
@@ -119,9 +132,11 @@ MPI_Barrier(MPI_COMM_WORLD);
 ```
 
 ### 7. Gestione degli Errori
+
 MPI consente di gestire gli errori in modo che i programmi possano rispondere in modo appropriato a errori di comunicazione.
 
 ### 8. Profiler e Ottimizzazione
+
 Gli strumenti di profiling come **mpiP** e **TAU** possono aiutare a monitorare le performance di un'applicazione MPI, individuando i colli di bottiglia e migliorando l'efficienza.
 
 ## Esempio di Programma MPI
@@ -159,6 +174,7 @@ int main(int argc, char *argv[]) {
 ```
 
 ### 9. Compilazione e Esecuzione
+
 Per compilare e eseguire un programma MPI, utilizza `mpicc` (compilatore MPI) e `mpirun` (per eseguire il programma su più processi):
 
 ```bash
