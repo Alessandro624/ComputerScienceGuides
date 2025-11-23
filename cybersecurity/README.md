@@ -5,6 +5,7 @@ Questa cartella contiene guidesu vari aspetti della sicurezza informatica.
 ## Passive Reconnaissance
 
 - [OSINT](passive-reconnaissance/osint.md): raccolta di tecniche OSINT per trovare informazioni pubbliche su persone e organizzazioni.
+- [WHOIS](passive-reconnaissance/identification-whois.md): recuperare informazioni sui domini.
 - [DNS](passive-reconnaissance/dns.md): strumenti e comandi per l'analisi DNS (whois, dig, zone transfer, record lookup).
 - [SSL Certificates](passive-reconnaissance/ssl-certificates.md): analisi dei certificati SSL/TLS per ricavare informazioni su servizi e domini.
 - [Password Dumps](passive-reconnaissance/password-dumps.md): come cercare e valutare dump di password pubblici e mitigazioni.

@@ -13,30 +13,30 @@ Usa questo template quando crei nuove guide nel repository.
 
 ## Esempio di struttura minimale
 
-```md
-    # Titolo
+````md
+# Titolo
 
-    ## Scopo
+## Scopo
 
-    Breve descrizione.
+Breve descrizione.
 
-    ## Prerequisiti
+## Prerequisiti
 
-    - strumento X >= versione
+- strumento X >= versione
 
-    ## Setup
+## Setup
 
-    ```bash
-    comando per installare
-    ```
-
-    ## Esempi
-
-    ```bash
-    comando di esempio
-    ```
-
-    ## Riferimenti
-
-    - <https://esempio>
+```bash
+comando per installare
 ```
+
+## Esempi
+
+```bash
+comando di esempio
+```
+
+## Riferimenti
+
+- <https://esempio>
+````
