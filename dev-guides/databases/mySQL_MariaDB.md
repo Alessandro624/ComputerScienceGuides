@@ -282,7 +282,7 @@ Per eliminare dati da una tabella:
 DELETE FROM table_name [WHERE condition];
 ```
 
-## Modifica Delimitatore delle Istruzioni
+## Modifica Delimitatore delle ISTRUZIONI
 
 Per cambiare il delimitatore delle istruzioni SQL:
 

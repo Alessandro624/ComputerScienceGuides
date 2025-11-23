@@ -1,6 +1,7 @@
 # Ignora tutto
 *
 
-# Non ignorare i file .gitignore e i file Markdown
+# Non ignorare il file .gitignore e tutti i file Markdown in qualsiasi sottocartella
 !.gitignore
-!*.md
+!**/*.md
+!*/

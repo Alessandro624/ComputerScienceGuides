@@ -231,19 +231,3 @@ Per eseguire il comando personalizzato:
 ```bash
 mvn exec:java
 ```
-
-## Esegui un Semplice Comando
-
-Maven offre anche comandi per la gestione del progetto, per esempio:
-
-- Visualizzare informazioni sul progetto:
-
-  ```bash
-  mvn help:effective-pom
-  ```
-
-- Visualizzare la versione di Maven:
-
-  ```bash
-  mvn --version
-  ```

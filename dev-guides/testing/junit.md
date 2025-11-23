@@ -168,7 +168,7 @@ Verifica che due valori siano uguali.
 assertEquals(10, risultato);
 ```
 
-### assertTrue / assertFalse
+### assertTrue / @assertFalse
 
 Verifica che una condizione sia vera o falsa.
 

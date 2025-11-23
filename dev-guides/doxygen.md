@@ -24,7 +24,7 @@ Scarica l'installer dal [sito ufficiale di Doxygen](https://www.doxygen.nl/downl
 
 ### Su macOS
 
-Utilizza Homebrew per installare Doxygen:
+Utilizza Homebrew per installare Doxygen:
 
 ```bash
 brew install doxygen
@@ -44,7 +44,7 @@ Questo comando genera un file `Doxyfile` con le impostazioni predefinite.
 
 Apri il file `Doxyfile` con un editor di testo e modifica le seguenti opzioni:
 
-- **PROJECT_NAME**: Nome del progetto.
+- **PROJECT_NAME**: Nome del progetto.
 - **OUTPUT_DIRECTORY**: Directory in cui verrà salvata la documentazione generata.
 - **INPUT**: Directory o file da cui Doxygen estrarrà la documentazione.
 - **RECURSIVE**: Imposta su `YES` se desideri che Doxygen analizzi le sottodirectory.
