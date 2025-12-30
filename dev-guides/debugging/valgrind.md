@@ -1,5 +1,17 @@
 # Guida a Valgrind
 
+## Scopo
+
+Questa guida spiega come utilizzare Valgrind per il debugging e il profiling di programmi C/C++. Copre l'individuazione di memory leak, problemi di gestione della memoria e l'analisi delle prestazioni.
+
+## Prerequisiti
+
+- Programma compilato con simboli di debug (`-g`)
+- Linux (Valgrind non supporta nativamente Windows/macOS)
+- Conoscenza base di C/C++ e gestione della memoria
+
+---
+
 Valgrind è un framework per il debugging e il profiling di programmi, particolarmente utile per individuare perdite di memoria e problemi di gestione della memoria in programmi scritti in C e C++.
 
 ## Installazione
@@ -105,3 +117,21 @@ KCachegrind fornisce una rappresentazione visiva delle chiamate di funzione, evi
 3. **Memory leaks**: Se l'output di Valgrind segnala perdite di memoria, verifica che ogni `malloc()` o `new` abbia un corrispondente `free()` o `delete`.
 4. **Eccessivo utilizzo di memoria**: Utilizza Massif e Massif-Visualizer per individuare i punti in cui il programma consuma più memoria del necessario.
 5. **Ottimizzazione del codice**: Se Callgrind indica che alcune funzioni sono particolarmente costose, valuta la possibilità di ottimizzarle per ridurre il tempo di esecuzione.
+
+---
+
+## Best Practices
+
+- **Compila con -g**: Includi sempre i simboli di debug per output più dettagliati
+- **Disabilita ottimizzazioni**: Usa `-O0` durante il debugging per risultati accurati
+- **Analizza regolarmente**: Integra Valgrind nel processo di CI/CD
+- **Risolvi prima i memory leak**: Affronta prima le perdite di memoria, poi gli errori
+- **Usa suppression file**: Crea file di soppressione per falsi positivi noti
+- **Testa con input realistici**: Usa dataset rappresentativi per il profiling
+
+## Riferimenti
+
+- [Valgrind Documentation](https://valgrind.org/docs/manual/manual.html)
+- [Memcheck Manual](https://valgrind.org/docs/manual/mc-manual.html)
+- [Callgrind Manual](https://valgrind.org/docs/manual/cl-manual.html)
+- [KCachegrind](https://kcachegrind.github.io/)
