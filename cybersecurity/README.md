@@ -1,6 +1,6 @@
 # Cybersecurity — Indice
 
-Questa cartella contiene guidesu vari aspetti della sicurezza informatica.
+Questa cartella contiene guide su vari aspetti della sicurezza informatica.
 
 ## Passive Reconnaissance
 
@@ -63,7 +63,7 @@ Questa cartella contiene guidesu vari aspetti della sicurezza informatica.
 - [Session Hijacking](application-vulns/session-hijacking.md): tecniche e contromisure per session hijack.
 - [Password Tools](application-vulns/password-tools.md): strumenti per gestione e cracking di password (uso etico).
 - [XSS - CSRF](application-vulns/xss-csrf.md): XSS e CSRF: esempi e difese.
-- [LFI - RFI`](application-vulns/lfi-rfi.md): Local/Remote File Inclusion e mitigazioni.
+- [LFI - RFI](application-vulns/lfi-rfi.md): Local/Remote File Inclusion e mitigazioni.
 - [Path Traversal](application-vulns/path-traversal.md): path traversal e controlli suggeriti.
 - [API Security](application-vulns/api-security.md): sicurezza per API REST/GraphQL.
 - [OWASP Testing](application-vulns/owasp-testing.md): riferimento alle metodologie OWASP per i test.
