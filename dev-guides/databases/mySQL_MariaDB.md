@@ -1,5 +1,31 @@
 # MySQL / MariaDB - Guida rapida
 
+## Scopo
+
+Questa guida fornisce una panoramica completa dei comandi essenziali per MySQL e MariaDB. Copre la gestione di utenti, database, tabelle, backup, trigger, stored procedure, view, transazioni ed eventi.
+
+## Prerequisiti
+
+- MySQL >= 5.7 o MariaDB >= 10.3
+- Accesso al terminale o client MySQL (MySQL Workbench, DBeaver)
+- Privilegi di amministratore per operazioni di gestione
+
+## Installazione
+
+### Linux (Debian/Ubuntu)
+
+```bash
+sudo apt-get update
+sudo apt-get install mariadb-server mariadb-client
+sudo mysql_secure_installation
+```
+
+### Windows
+
+Scarica l'installer da [MySQL Downloads](https://dev.mysql.com/downloads/installer/) o [MariaDB Downloads](https://mariadb.org/download/).
+
+---
+
 ## Accesso
 
 Per accedere a MySQL o MariaDB, utilizzare il comando:
@@ -406,3 +432,22 @@ Per eliminare un evento:
 ```sql
 DROP EVENT [IF EXISTS] event_name;
 ```
+
+---
+
+## Best Practices
+
+- **Backup regolari**: Configura backup automatici con mysqldump o strumenti dedicati
+- **Indici appropriati**: Crea indici sulle colonne usate frequentemente in WHERE e JOIN
+- **Prepared statements**: Usa prepared statements per prevenire SQL injection
+- **Normalizzazione**: Progetta lo schema seguendo le forme normali
+- **Connection pooling**: Usa pool di connessioni per applicazioni web
+- **Charset UTF-8**: Usa `utf8mb4` per supporto completo Unicode
+- **Privilegi minimi**: Assegna solo i privilegi necessari agli utenti
+
+## Riferimenti
+
+- [MySQL Documentation](https://dev.mysql.com/doc/)
+- [MariaDB Documentation](https://mariadb.com/kb/en/documentation/)
+- [MySQL Tutorial](https://www.mysqltutorial.org/)
+- [Funzioni e Operatori MySQL](https://dev.mysql.com/doc/refman/8.0/en/functions.html)
