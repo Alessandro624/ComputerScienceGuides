@@ -1,5 +1,18 @@
 # JUnit 5 - Guida Rapida
 
+## Scopo
+
+Questa guida fornisce un'introduzione completa a JUnit 5, il framework di testing più utilizzato per Java. Copre le annotation principali, le asserzioni, i test parametrizzati e le funzionalità avanzate.
+
+## Prerequisiti
+
+- JDK >= 8
+- Build tool (Maven o Gradle)
+- IDE con supporto JUnit (IntelliJ IDEA, Eclipse, VS Code)
+- Conoscenza base di Java
+
+---
+
 ## Installazione
 
 Per utilizzare JUnit 5, aggiungi le dipendenze appropriate al tuo progetto. Se stai utilizzando Maven, aggiungi le seguenti dipendenze al file `pom.xml`:
@@ -307,3 +320,22 @@ public class MyTest {
     }
 }
 ```
+
+---
+
+## Best Practices
+
+- **Test indipendenti**: Ogni test deve essere eseguibile indipendentemente dagli altri
+- **Naming chiaro**: Usa nomi descrittivi per i metodi di test (es. `shouldReturnTrueWhenInputIsValid`)
+- **AAA Pattern**: Struttura i test con Arrange, Act, Assert
+- **Un assert per test**: Preferisci un'unica asserzione per test quando possibile
+- **Test veloci**: I test unitari devono essere rapidi (< 100ms)
+- **Mocking**: Usa Mockito per isolare le dipendenze
+- **Coverage**: Punta a una copertura del codice >= 80%
+
+## Riferimenti
+
+- [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
+- [JUnit 5 API Documentation](https://junit.org/junit5/docs/current/api/)
+- [Mockito](https://site.mockito.org/)
+- [AssertJ](https://assertj.github.io/doc/)
