@@ -32,6 +32,19 @@ Questa guida copre tool per auditing di reti wireless, inclusi WiFi, Bluetooth e
 | Sena UD100 | Long range |
 | CSR 4.0 Dongle | Basic scanning |
 
+### Software Wireless
+
+| Tool | Uso |
+|------|-----|
+| Wifite2 | Automated WiFi attacks |
+| hostapd | Rogue AP creation |
+| EAPHammer | Evil twin for WPA-Enterprise |
+| mdk4 | Deauth e beacon flooding |
+| Spooftooph | Bluetooth spoofing |
+| Reaver | WPS attacks |
+| WiGLE | Wardriving database |
+| Fern Wi-Fi Cracker | GUI wireless auditing |
+
 ---
 
 ## Monitor Mode

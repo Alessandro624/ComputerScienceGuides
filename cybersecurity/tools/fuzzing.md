@@ -26,6 +26,20 @@ Questa guida copre tecniche e tool di fuzzing per scoprire vulnerabilità in app
 
 ---
 
+## Code Quality & Assurance Tools
+
+| Tool | Linguaggio | Uso |
+|------|------------|-----|
+| SpotBugs | Java | Static analysis |
+| FindSecBugs | Java | Security-focused analysis |
+| SonarQube | Multi | Code quality platform |
+| Radamsa | Multi | General-purpose fuzzer |
+| Peach | Multi | Protocol fuzzing |
+| Mutiny | Network | Network protocol fuzzer |
+| AFL | C/C++ | Coverage-guided fuzzing |
+
+---
+
 ## Web Fuzzing
 
 ### Ffuf

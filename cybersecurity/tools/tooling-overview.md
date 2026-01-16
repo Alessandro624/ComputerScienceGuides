@@ -148,6 +148,29 @@ Questa guida fornisce una panoramica completa dei tool essenziali per penetratio
 
 ---
 
+## Evasion
+
+| Tool | Uso |
+|------|-----|
+| Veil | Payload obfuscation |
+| Tor | Anonymous routing |
+| Proxychains | Traffic proxying |
+| DNSCat2 | DNS tunneling |
+| Iodine | DNS tunnel |
+| dns2tcp | DNS tunnel |
+
+---
+
+## Security Distros
+
+| Distro | Focus |
+|--------|-------|
+| Kali Linux | Penetration testing |
+| Parrot OS | Security e privacy |
+| BlackArch | Arch-based security |
+
+---
+
 ## Post-Exploitation
 
 ### Enumeration

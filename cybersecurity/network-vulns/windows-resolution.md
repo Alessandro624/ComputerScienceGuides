@@ -20,6 +20,12 @@ sudo apt-get install responder
 
 # Inveigh (PowerShell)
 Import-Module .\Inveigh.ps1
+
+# Pupy (RAT con moduli LLMNR/NBT-NS)
+git clone https://github.com/n1nj4sec/pupy.git
+
+# NBNSpoof (legacy tool per NetBIOS spoofing)
+# Incluso in Metasploit
 ```
 
 ---

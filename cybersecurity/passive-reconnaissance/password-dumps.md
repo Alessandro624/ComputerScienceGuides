@@ -20,9 +20,11 @@ Raccogliere leak pubblici permette di stimare il rischio reale: dipendenti che r
 ## Strumenti Chiave
 
 - h8mail: ricerca multi-source in leak pubblici.  
+- pwndb: query onion service per credenziali compromesse.  
 - whatbreach: correlazione breach → email.  
 - scavenger / buster: dump automation.  
-- leaklooker: ricerca di database esposti.
+- leaklooker: ricerca di database esposti.  
+- DeHashed: servizio commerciale per breach search.
 
 ## Workflow Operativo
 

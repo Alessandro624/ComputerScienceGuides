@@ -240,8 +240,61 @@ WEP → WPA3 (best practice)
 - **Autorizzazione**: Scritta e specifica
 - **Documenta**: Per security assessment
 
+---
+
+## KRACK Attack (Key Reinstallation Attack)
+
+### Panoramica
+
+KRACK (Key Reinstallation Attack) è una vulnerabilità critica nel protocollo WPA2 scoperta nel 2017 che colpisce il **4-way handshake**.
+
+| CVE | Componente | Impatto |
+|-----|------------|---------|
+| CVE-2017-13077 | PTK in 4-way handshake | Reinstallazione chiavi |
+| CVE-2017-13078 | GTK in 4-way handshake | Decryption traffico |
+| CVE-2017-13079 | IGTK in 4-way handshake | Packet injection |
+| CVE-2017-13080 | GTK in group key handshake | Replay attacks |
+
+### Come Funziona
+
+```
+Client                          Access Point
+  |                                   |
+  |<---- Msg 1 (ANonce) -------------|
+  |                                   |
+  |---- Msg 2 (SNonce, MIC) -------->|
+  |                                   |
+  |<---- Msg 3 (GTK, MIC) -----------|  <-- Attaccante blocca ACK
+  |     [Chiave installata]           |
+  |                                   |
+  |<---- Msg 3 (RETRANSMIT) ---------|  <-- Key reinstallation!
+  |     [Nonce reset = riuso]         |
+```
+
+### Strumenti per KRACK Testing
+
+```bash
+# Clone KRACK scripts
+git clone https://github.com/vanhoefm/krackattacks-scripts
+
+# Test client vulnerability
+cd krackattacks-scripts/krackattack
+./krack-ft-test.py wlan0mon
+```
+
+### Mitigazioni KRACK
+
+- **Patch firmware**: Aggiornare tutti i dispositivi
+- **Migrazione WPA3**: Implementa Protected Management Frames
+- **Client isolation**: Limita comunicazione tra client
+- **802.11w (PMF)**: Protegge management frames
+
+---
+
 ## Riferimenti
 
 - [Aircrack-ng Documentation](https://www.aircrack-ng.org/doku.php?id=getting_started)
 - [PTW Attack Paper](https://eprint.iacr.org/2007/120.pdf)
 - [FMS Attack](https://www.cs.cornell.edu/people/egs/615/rc4_ksaproc.pdf)
+- [KRACK Attacks - vanhoefm](https://www.krackattacks.com/)
+- [KRACK Scripts GitHub](https://github.com/vanhoefm/krackattacks-scripts)

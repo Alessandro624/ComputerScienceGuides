@@ -303,6 +303,13 @@ adb root
 | Hopper | iOS/macOS | Disassembler |
 | Ghidra | Both | Reverse engineering |
 | MobSF | Both | Automated analysis |
+| Drozer | Android | Security assessment framework |
+| Needle | iOS | iOS security testing (deprecated) |
+| ApkX | Android | Decompiler wrapper |
+| APK Studio | Android | IDE per reverse engineering |
+| Postman | Both | API testing |
+| Burp Suite | Both | Proxy e web security |
+| Ettercap | Both | Network analysis |
 
 ---
 

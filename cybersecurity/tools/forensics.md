@@ -13,6 +13,19 @@ Questa guida copre tool e tecniche di digital forensics per acquisizione, analis
 
 ---
 
+## Distribuzioni Forensi
+
+| Distro | Focus |
+|--------|-------|
+| SIFT Workstation | SANS forensics toolkit |
+| CAINE | Computer Aided Investigative Environment |
+| ADIA | Appliance for Digital Investigation |
+| PALADIN | Forensic suite bootable |
+| Skadi | Collection e hunting |
+| Security Onion | Network security monitoring |
+
+---
+
 ## Disk Forensics
 
 ### Acquisizione

@@ -13,6 +13,17 @@ Questa guida copre best practices per la creazione di report professionali di pe
 
 ---
 
+## Tools per Reporting
+
+| Tool | Tipo | Uso |
+|------|------|-----|
+| Dradis | Open source | Collaboration platform |
+| SysReptor | Open source | Report generation |
+| Serpico | Open source | Report management |
+| PlexTrac | Commercial | Full platform |
+
+---
+
 ## Struttura Report
 
 ### Executive Summary

@@ -66,6 +66,26 @@ steampipe query "select * from aws_s3_bucket where versioning_enabled = false"
 steampipe dashboard
 ```
 
+### CloudBrute
+
+```bash
+# Enumerazione cloud storage
+git clone https://github.com/0xsha/CloudBrute.git
+cd CloudBrute
+go build
+./CloudBrute -d target.com -k wordlist.txt -m storage
+```
+
+### Cloud Custodian
+
+```bash
+# Policy-as-code per cloud governance
+pip install c7n c7n-aws
+
+# Esempio policy
+custodian run -s output policy.yml
+```
+
 ---
 
 ## AWS
